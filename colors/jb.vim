@@ -84,7 +84,7 @@ call s:h("JBDiffDeletedLine", { "bg": s:colors.diffdel }) " Deleted lines in dif
 call s:h("JBGutterAddedLine", { "fg": s:colors.gutteradd }) " Added lines in gutter
 call s:h("JBGutterChangedLine", { "fg": s:colors.guttermod }) " Changed lines in gutter
 call s:h("JBGutterDeletedLine", { "fg": s:colors.gutterdel }) " Deleted lines in gutter
-call s:h("JBGutterLineNr", { "fg": s:colors.diffdel }) " Line numbers in gutter
+call s:h("JBGutterLineNr", { "fg": s:colors.lineNumber }) " Line numbers in gutter
 
 " UI
 call s:h("JBEditorBG", { "bg": s:colors.editor }) " Editor background
