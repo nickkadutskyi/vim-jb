@@ -139,7 +139,7 @@ highlight! link Debug Tag
 " --- Text ---
 highlight! link Cursor JBCursor
 highlight! link LineNr JBGutterLineNr 
-highlight! link CursorLineNr JBGutterLineNrOnCaretRow
+highlight! link CursorLineNR JBGutterLineNrOnCaretRow
 highlight! link NormalNC Normal
 highlight! link Folded JBFoldedText
 highlight! link FoldColumn Folded
