@@ -85,6 +85,7 @@ call s:h("JBGutterAddedLine", { "fg": s:colors.gutteradd }) " Added lines in gut
 call s:h("JBGutterChangedLine", { "fg": s:colors.guttermod }) " Changed lines in gutter
 call s:h("JBGutterDeletedLine", { "fg": s:colors.gutterdel }) " Deleted lines in gutter
 call s:h("JBGutterLineNr", { "fg": s:colors.lineNumber }) " Line numbers in gutter
+call s:h("JBGutterLineNrOnCaretRow", { "fg": s:colors.lineNumberOnCaretRow }) " Line numbers in gutter on caret row
 
 " UI
 call s:h("JBEditorBG", { "bg": s:colors.editor }) " Editor background
@@ -138,7 +139,7 @@ highlight! link Debug Tag
 " --- Text ---
 highlight! link Cursor JBCursor
 highlight! link LineNr JBGutterLineNr 
-highlight! link CursorLineNr Comment
+highlight! link CursorLineNr JBGutterLineNrOnCaretRow
 highlight! link NormalNC Normal
 highlight! link Folded JBFoldedText
 highlight! link FoldColumn Folded
