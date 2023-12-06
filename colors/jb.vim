@@ -59,7 +59,7 @@ call s:h("JBError", { "fg": s:colors.err, "gui": "underline", "cterm": "underlin
 call s:h("JBWarning", { "fg": s:colors.warning, "gui": "underline", "cterm": "underline" }) " Doesn't match JB exactly, can't do seperate color undercurls in terminal
 " call s:h("JBCursor", { "fg": s:colors.editor, "bg": s:colors.comment }) " Cursor
 call s:h("JBCursor", { "fg": s:colors.caret, "bg": s:colors.caretRow }) " Caret
-call s:h("JBCursorBG", { "bg": s:colors.caretRow }) " Caret row background
+call s:h("JBCursorBG", { "bg": s:colors.caretRow }) " Caret
 
 " Language defaults
 call s:h("JBString", { "fg": s:colors.string }) " Strings
@@ -140,7 +140,6 @@ highlight! link Debug Tag
 
 " --- Text ---
 highlight! link Cursor JBCursor
-highlight! link CursorLine JBCursorBG
 highlight! link LineNr JBGutterLineNr 
 highlight! link CursorLineNr JBGutterLineNrOnCaretRow
 highlight! link NormalNC Normal
@@ -156,7 +155,7 @@ highlight! link vCursor Cursor
 highlight! link iCursor Cursor
 highlight! link lCursor Cursor
 highlight! link CursorIM Cursor
-highlight! link CursorLine JBTreeBG
+highlight! link CursorLine JBCursorBG
 highlight! link CursorColumn CursorLine
 highlight! link MatchParen JBMatchedBracket
 highlight! link Title Constant
