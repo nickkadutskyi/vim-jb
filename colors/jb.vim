@@ -316,7 +316,7 @@ highlight! link htmlArg Normal
 highlight! link htmlScriptTag Tag
 highlight! link htmlString String
 " --- HTML (nvim-treesitter/nvim-treesitter) ---
-highlight! link @tag.delimeter.html JBTagBracket
+highlight! link @tag.delimiter.html JBTagBracket
 
 " --- Vim ---
 highlight! link vimLet Keyword
