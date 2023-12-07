@@ -84,9 +84,9 @@ call s:h("JBDiffChangedText", { "bg": s:colors.difftext }) " Changed text in dif
 call s:h("JBDiffDeletedLine", { "bg": s:colors.diffdel }) " Deleted lines in diff
 
 " Gutter
-call s:h("JBGutterAddedLine", { "fg": s:colors.gutteradd }) " Added lines in gutter
-call s:h("JBGutterChangedLine", { "fg": s:colors.guttermod }) " Changed lines in gutter
-call s:h("JBGutterDeletedLine", { "fg": s:colors.gutterdel }) " Deleted lines in gutter
+call s:h("JBGutterAddedLine", { "fg": s:colors.gutteradd, "gui": "bold", "cterm": "bold" }) " Added lines in gutter
+call s:h("JBGutterChangedLine", { "fg": s:colors.guttermod, "gui": "bold", "cterm": "bold"  }) " Changed lines in gutter
+call s:h("JBGutterDeletedLine", { "fg": s:colors.gutterdel, "gui": "bold", "cterm": "bold"  }) " Deleted lines in gutter
 call s:h("JBGutterLineNr", { "fg": s:colors.lineNumber }) " Line numbers in gutter
 call s:h("JBGutterLineNrOnCaretRow", { "fg": s:colors.lineNumberOnCaretRow }) " Line numbers in gutter on caret row
 
@@ -95,6 +95,8 @@ call s:h("JBEditorBG", { "bg": s:colors.editor }) " Editor background
 call s:h("JBTree", { "fg": s:colors.text, "bg": s:colors.folded }) " Tree text
 call s:h("JBTreeBG", { "bg": s:colors.folded }) " Tree background
 call s:h("JBDivider", { "fg": s:colors.diffdel }) " Divider between panes
+call s:h("JBStatusLine", { "fg": s:colors.breadcrumbsDefault, "bg": s:colors.editor }) " Status Line
+call s:h("JBStatusLineNC", { "fg": s:colors.lineNumber, "bg": s:colors.editor }) " Status Line NC
 
 " === VIM HIGHLIGHT GROUPS ============================================================
 " See :help highlight-groups for more information
@@ -202,9 +204,12 @@ call s:h("FloatBorder", { "fg": s:colors.diffdel, "bg": s:colors.editor }) "Floa
 highlight! link NormalFloat Normal
 highlight! link Terminal Normal
 highlight! link EndOfBuffer JBEditorBG
-highlight! link StatusLine JBTree
-highlight! link StatusLineTerm StatusLine
-call s:h("StatusLineNC", { "fg": s:colors.diffdel, "bg": s:colors.folded }) "Status line inactive
+" highlight! link StatusLine JBTree
+highlight! link StatusLine JBStatusLine
+" highlight! link StatusLineTerm StatusLine
+highlight! link StatusLineTerm JBStatusLine
+" call s:h("StatusLineNC", { "fg": s:colors.diffdel, "bg": s:colors.folded }) "Status line inactive
+highlight! link StatuslineNC JBStatusLineNC
 highlight! link StatusLineTermNC StatusLineNC
 highlight! link TabLine JBTree
 highlight! link TabLineFill JBTree
@@ -356,6 +361,11 @@ highlight! link GitGutterAdd JBGutterAddedLine
 highlight! link GitGutterChange JBGutterChangedLine
 highlight! link GitGutterDelete JBGutterDeletedLine
 
+highlight! link GitSignsAdd JBGutterAddedLine
+highlight! link GitSignsChange JBGutterChangedLine
+highlight! link GitSignsDelete JBGutterDeletedLine
+highlight! link GitSignsAdd JBGutterAddedLine
+
 " --- Fugitive ---
 highlight! link diffAdded DiffAdd
 highlight! link diffRemoved DiffDelete
@@ -433,7 +443,7 @@ highlight! link CocGitRemovedSign JBGutterDeletedLine
 " === NEOVIM ====================================================================
 
 if has('nvim')
-  highlight! link Statusline StatusLine
+  highlight! link Statusline JBStatusLine
   highlight! link WinBarNC JBTree
   highlight! link DiagnosticFloatingError ErrorText
   highlight! link DiagnosticFloatingWarn WarningText
