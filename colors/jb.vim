@@ -58,7 +58,7 @@ call s:h("JBFoldedText", { "fg": s:colors.comment, "bg": s:colors.folded }) " Fo
 call s:h("JBError", { "fg": s:colors.err, "gui": "underline", "cterm": "underline" }) " Doesn't match JB exactly, can't do seperate color undercurls in terminal
 call s:h("JBWarning", { "fg": s:colors.warning, "gui": "underline", "cterm": "underline" }) " Doesn't match JB exactly, can't do seperate color undercurls in terminal
 " call s:h("JBCursor", { "fg": s:colors.editor, "bg": s:colors.comment }) " Cursor
-call s:h("JBCursor", { "fg": s:colors.caret, "bg": s:colors.caretRow }) " Caret
+call s:h("JBCursor", { "fg": s:colors.caret, "bg": s:colors.caretRow, "background": s:colors.caretRow }) " Caret
 call s:h("JBCursorBG", { "bg": s:colors.caretRow }) " Caret
 
 " Language defaults
@@ -96,7 +96,7 @@ call s:h("JBTree", { "fg": s:colors.text, "bg": s:colors.folded }) " Tree text
 call s:h("JBTreeBG", { "bg": s:colors.folded }) " Tree background
 call s:h("JBDivider", { "fg": s:colors.diffdel }) " Divider between panes
 call s:h("JBStatusLine", { "fg": s:colors.breadcrumbsDefault, "bg": s:colors.editor }) " Status Line
-call s:h("JBStatusLineNC", { "fg": s:colors.lineNumber, "bg": s:colors.editor }) " Status Line NC
+call s:h("JBStatusLineNC", { "fg": s:colors.diffdel, "bg": s:colors.editor }) " Status Line NC
 
 " === VIM HIGHLIGHT GROUPS ============================================================
 " See :help highlight-groups for more information
@@ -160,7 +160,7 @@ highlight! link iCursor Cursor
 highlight! link lCursor Cursor
 highlight! link CursorIM Cursor
 highlight! link CursorLine JBCursorBG
-highlight! link CursorColumn CursorLine
+highlight! link CursorColumn JBCursor
 highlight! link MatchParen JBMatchedBracket
 highlight! link Title Constant
 
@@ -495,6 +495,9 @@ if has('nvim')
   highlight! link healthError ErrorText
   highlight! link healthSuccess DiffAdd
   highlight! link healthWarning WarningText
+
+  " --- nvim-scrollbar ---
+  highlight! link ScrollbarHandle JBCursor
 endif
 
 " === FOOTER ============================================================================
