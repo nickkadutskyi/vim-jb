@@ -99,7 +99,8 @@ call s:h("JBDivider", { "fg": s:colors.diffdel }) " Divider between panes
 " See :help highlight-groups for more information
 
 " --- Major ---
-call s:h("Normal", {"fg": s:colors.text, "bg": s:colors.editor}) " Normal text
+" call s:h("Normal", {"fg": s:colors.text, "bg": s:colors.editor}) " Normal text
+call s:h("Normal", {"fg": s:colors.text}) " Normal text
 highlight! link Comment JBComment
 highlight! link Constant JBConstant
 highlight! link Identifier JBFunction
@@ -140,7 +141,7 @@ highlight! link Debug Tag
 
 " --- Text ---
 highlight! link Cursor JBCursor
-highlight! link LineNr JBGutterLineNr 
+highlight! link LineNr JBGutterLineNr
 highlight! link CursorLineNr JBGutterLineNrOnCaretRow
 highlight! link NormalNC Normal
 highlight! link Folded JBFoldedText
@@ -300,7 +301,7 @@ highlight! link rustCommentLineDoc JBDocComment
 highlight! link typescriptStorageClass Text
 highlight! link typescriptEndColons Text
 highlight! link typescriptMessage String
-highlight! link typescriptGlobalObjects Constant 
+highlight! link typescriptGlobalObjects Constant
 highlight! link typescriptBraces Text
 highlight! link typescriptParens Text
 
@@ -325,7 +326,7 @@ highlight! link vimFuncName Function
 highlight! link ktDocComment JBDocComment
 highlight! link ktDocTag JBStringRef
 highlight! link ktDocTagParam Text
-highlight! link ktAnnotation Tag 
+highlight! link ktAnnotation Tag
 highlight! link ktComplexInterpolationBrace Keyword
 highlight! link ktLabel Number
 highlight! link ktArrow Text
@@ -333,6 +334,17 @@ highlight! link ktType Text
 highlight! link ktModifier Keyword
 highlight! link ktStructure Keyword
 highlight! link ktSimpleInterpolation Keyword
+
+" --- PHP (nvim-treesitter/nvim-treesitter) ---
+highlight! link @variable.php JBConstant
+highlight! link @namespace.php Normal
+highlight! link @type.php Normal
+highlight! link @type.definition.php Normal
+highlight! link @tag.attribute Normal
+highlight! link @constructor.php Normal
+" requires (php_tag) and "?>" to be set as @tag (by default they are @punctuation.bracket)
+highlight! link @tag.php JBKeyword
+
 
 " === PLUGIN SPECIFIC HIGHLIGHTS (NON-LANGUAGE) ======================================================
 
@@ -376,7 +388,7 @@ highlight! link FernRootSymbol String
 highlight! link FernRootText String
 highlight! link FernBranchSymbol String
 highlight! link FernBranchText ModeMsg
-highlight! link FernLeafSymbol Function 
+highlight! link FernLeafSymbol Function
 highlight! link FernGitStatusIndex DiffAdd
 highlight! link FernGitStatusWorktree DiffText
 highlight! link FernGitStatusUntracked DiffAdd
