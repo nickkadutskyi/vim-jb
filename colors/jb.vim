@@ -73,6 +73,7 @@ call s:h("JBDocComment", { "fg": s:colors.doccomment }) " Documentation comments
 call s:h("JBConstant", { "fg": s:colors.const }) " Constants
 call s:h("JBType", { "fg": s:colors.type }) " Types
 call s:h("JBTag", { "fg": s:colors.tag }) " Tags
+call s:h("JBTagBracket", { "fg": s:colors.tagBracket }) " Tag Bracket
 call s:h("JBMatchedBracket", { "fg": s:colors.text, "bg": s:colors.folded, "gui": "bold", "cterm": "bold" }) " Matching brackets
 call s:h("JBStruct", { "fg": s:colors.struct })
 
@@ -314,6 +315,8 @@ highlight! link htmlSpecialTagName Tag
 highlight! link htmlArg Normal
 highlight! link htmlScriptTag Tag
 highlight! link htmlString String
+" --- HTML (nvim-treesitter/nvim-treesitter) ---
+highlight! link @tag.delimeter.html JBTagBracket
 
 " --- Vim ---
 highlight! link vimLet Keyword

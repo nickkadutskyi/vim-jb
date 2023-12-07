@@ -32,7 +32,8 @@
     "lineNumber":   {"hex": "#4B5059", "rgb": [75, 80, 89],     "xterm": 59},
     "lineNumberOnCaretRow": {"hex": "#A1A3AB", "rgb": [161, 163, 171], "xterm": 145},
     "caret":        {"hex": "#CED0D6", "rgb": [206, 208, 214],  "xterm": 188},
-    "caretRow":     {"hex": "#26282E", "rgb": [38, 40, 46],     "xterm": 16}
+    "caretRow":     {"hex": "#26282E", "rgb": [38, 40, 46],     "xterm": 16},
+    "tagBracket":   {"hex": "#D5B778", "rgb": [213, 183, 120],  "xterm": 180}
   },
   "mid": {
     "editor":       {"hex": "#2B2D30", "rgb": [43, 45, 48],     "xterm": 16},
@@ -67,7 +68,8 @@
     "lineNumber":   {"hex": "#4B5059", "rgb": [75, 80, 89],     "xterm": 59},
     "lineNumberOnCaretRow": {"hex": "#A1A3AB", "rgb": [161, 163, 171], "xterm": 145},
     "caret":        {"hex": "#CED0D6", "rgb": [206, 208, 214],  "xterm": 188},
-    "caretRow":     {"hex": "#26282E", "rgb": [38, 40, 46],     "xterm": 16}
+    "caretRow":     {"hex": "#26282E", "rgb": [38, 40, 46],     "xterm": 16},
+    "tagBracket":   {"hex": "#D5B778", "rgb": [213, 183, 120],  "xterm": 180}
   },
   "light": {
     "editor":       {"hex": "#FFFFFF", "rgb": [255, 255, 255],  "xterm": 231},
@@ -102,6 +104,7 @@
     "lineNumber":   {"hex": "#AEB3C2", "rgb": [174, 179, 194],  "xterm": 145},
     "lineNumberOnCaretRow": {"hex": "#767A8A", "rgb": [118, 122, 138], "xterm": 102},
     "caret":        {"hex": "#000000", "rgb": [0, 0, 0],        "xterm": 16},
-    "caretRow":     {"hex": "#F5F8FE", "rgb": [245, 248, 254],  "xterm": 231}
+    "caretRow":     {"hex": "#F5F8FE", "rgb": [245, 248, 254],  "xterm": 231},
+    "tagBracket":   {"hex": "#080808", "rgb": [8, 8, 8],        "xterm": 16}
   }
 }
