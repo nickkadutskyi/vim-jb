@@ -34,7 +34,8 @@
     "caret":        {"hex": "#CED0D6", "rgb": [206, 208, 214],  "xterm": 188},
     "caretRow":     {"hex": "#26282E", "rgb": [38, 40, 46],     "xterm": 16},
     "tagBracket":   {"hex": "#D5B778", "rgb": [213, 183, 120],  "xterm": 180},
-    "breadcrumbsDefault":   {"hex": "#9DA0A8", "rgb": [157, 160, 168], "xterm": 145}
+    "breadcrumbsDefault":   {"hex": "#9DA0A8", "rgb": [157, 160, 168], "xterm": 145},
+    "textSearchResultBg": {"hex": "#114957", "rgb": [17, 73, 87], "xterm": 23}
   },
   "mid": {
     "editor":       {"hex": "#2B2D30", "rgb": [43, 45, 48],     "xterm": 16},
@@ -71,7 +72,8 @@
     "caret":        {"hex": "#CED0D6", "rgb": [206, 208, 214],  "xterm": 188},
     "caretRow":     {"hex": "#26282E", "rgb": [38, 40, 46],     "xterm": 16},
     "tagBracket":   {"hex": "#D5B778", "rgb": [213, 183, 120],  "xterm": 180},
-    "breadcrumbsDefault":   {"hex": "#9DA0A8", "rgb": [157, 160, 168], "xterm": 145}
+    "breadcrumbsDefault":   {"hex": "#9DA0A8", "rgb": [157, 160, 168], "xterm": 145},
+    "textSearchResultBg": {"hex": "#114957", "rgb": [17, 73, 87], "xterm": 23}
   },
   "light": {
     "editor":       {"hex": "#FFFFFF", "rgb": [255, 255, 255],  "xterm": 231},
@@ -108,6 +110,8 @@
     "caret":        {"hex": "#000000", "rgb": [0, 0, 0],        "xterm": 16},
     "caretRow":     {"hex": "#F5F8FE", "rgb": [245, 248, 254],  "xterm": 231},
     "tagBracket":   {"hex": "#080808", "rgb": [8, 8, 8],        "xterm": 16},
-    "breadcrumbsDefault":   {"hex": "#6C707E", "rgb": [108, 112, 126], "xterm": 60}
+    "breadcrumbsDefault": {"hex": "#6C707E", "rgb": [108, 112, 126], "xterm": 60},
+    "textSearchResultFg": {"hex": "#000000", "rgb": [0,0,0],    "xterm": 16},
+    "textSearchResultBg": {"hex": "#FCD47E", "rgb": [252, 212, 126], "xterm": 222}
   }
 }

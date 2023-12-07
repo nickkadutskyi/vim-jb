@@ -34,16 +34,16 @@ function! s:h(group, style)
       unlet a:style.gui
     endif
   endif
-  let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
-  let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")
+  let l:ctermfg = (has_key(a:style, "fg") && has_key(a:style.fg, "cterm") ? a:style.fg.cterm : "NONE")
+  let l:ctermbg = (has_key(a:style, "bg") && has_key(a:style.bg, "cterm") ? a:style.bg.cterm : "NONE")
   execute "highlight" a:group
-    \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
-    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
-    \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
-    \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
+    \ "guifg="   (has_key(a:style, "fg") && has_key(a:style.fg, "gui")  ? a:style.fg.gui   : "NONE")
+    \ "guibg="   (has_key(a:style, "bg") && has_key(a:style.bg, "gui")  ? a:style.bg.gui   : "NONE")
+    \ "guisp="   (has_key(a:style, "sp") && has_key(a:style.sp, "gui")  ? a:style.sp.gui   : "NONE")
+    \ "gui="     (has_key(a:style, "gui")                               ? a:style.gui      : "NONE")
     \ "ctermfg=" . l:ctermfg
     \ "ctermbg=" . l:ctermbg
-    \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm     : "NONE")
+    \ "cterm="   (has_key(a:style, "cterm")                             ? a:style.cterm     : "NONE")
 endfunction
 
 
@@ -53,7 +53,8 @@ endfunction
 call s:h("JBDefault", { "fg": s:colors.text, "bg": s:colors.editor }) " Standard text
 call s:h("JBHyperlink", { "fg": s:colors.link, "gui": "underline", "cterm": "underline" })
 call s:h("JBTodo", { "fg": s:colors.todo }) " TODOs
-call s:h("JBSearchResult", { "bg": s:colors.search }) " Search results
+call s:h("JBSearchResult", { "bg": s:colors.textSearchResultBg, "fg": (has_key(s:colors, "textSearchResultFg") ? s:colors.textSearchResultFg : {}) }) " Search results
+" call s:h("JBSearchResult", { "bg": s:colors.textSearchResultBg }) " Search results
 call s:h("JBFoldedText", { "fg": s:colors.comment, "bg": s:colors.folded }) " Folded text
 call s:h("JBError", { "fg": s:colors.err, "gui": "underline", "cterm": "underline" }) " Doesn't match JB exactly, can't do seperate color undercurls in terminal
 call s:h("JBWarning", { "fg": s:colors.warning, "gui": "underline", "cterm": "underline" }) " Doesn't match JB exactly, can't do seperate color undercurls in terminal
@@ -150,7 +151,7 @@ highlight! link NormalNC Normal
 highlight! link Folded JBFoldedText
 highlight! link FoldColumn Folded
 highlight! link SignColumn Normal
-highlight! link Search JBSearch
+highlight! link Search JBSearchResult
 highlight! link IncSearch JBDiffChangedText
 highlight! link CurSearch IncSearch
 highlight! link ColorColumn JBTreeBG
