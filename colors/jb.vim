@@ -96,8 +96,8 @@ call s:h("JBEditorBG", { "bg": s:colors.editor }) " Editor background
 call s:h("JBTree", { "fg": s:colors.text, "bg": s:colors.folded }) " Tree text
 call s:h("JBTreeBG", { "bg": s:colors.folded }) " Tree background
 call s:h("JBDivider", { "fg": s:colors.diffdel }) " Divider between panes
-call s:h("JBStatusLine", { "fg": s:colors.breadcrumbsDefault, "bg": s:colors.editor }) " Status Line
-call s:h("JBStatusLineNC", { "fg": s:colors.diffdel, "bg": s:colors.editor }) " Status Line NC
+call s:h("JBStatusLine", { "fg": s:colors.breadcrumbsDefault, "bg": s:colors.statusLine }) " Status Line
+call s:h("JBStatusLineNC", { "fg": s:colors.diffdel, "bg": s:colors.statusLine }) " Status Line NCF
 
 " === VIM HIGHLIGHT GROUPS ============================================================
 " See :help highlight-groups for more information
