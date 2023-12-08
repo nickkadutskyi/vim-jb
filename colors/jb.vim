@@ -201,7 +201,8 @@ call s:h("PmenuKind", { "fg": s:colors.type, "bg": s:colors.folded }) "Popup men
 call s:h("PmenuExtra", { "fg": s:colors.comment, "bg": s:colors.folded }) "Popup menu extra
 highlight! link WildMenu PmenuSel
 highlight! link Directory String
-call s:h("FloatBorder", { "fg": s:colors.diffdel, "bg": s:colors.editor }) "Float border
+call s:h("JBFloatBorder", { "fg": s:colors.caret, "bg": s:colors.editor }) "Float border
+highlight! link FloatBorder JBFloatBorder
 highlight! link NormalFloat Normal
 highlight! link Terminal Normal
 highlight! link EndOfBuffer JBEditorBG
@@ -444,6 +445,8 @@ highlight! link CocGitRemovedSign JBGutterDeletedLine
 " === NEOVIM ====================================================================
 
 if has('nvim')
+  highlight! link CursorLineSign JBGutterLineNrOnCaretRow
+  highlight! link CursorLineFold JBGutterLineNrOnCaretRow
   highlight! link Statusline JBStatusLine
   highlight! link WinBarNC JBTree
   highlight! link DiagnosticFloatingError ErrorText
