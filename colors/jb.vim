@@ -89,7 +89,7 @@ call s:h("JBGutterAddedLine", { "fg": s:colors.gutteradd, "gui": "bold", "cterm"
 call s:h("JBGutterChangedLine", { "fg": s:colors.guttermod, "gui": "bold", "cterm": "bold"  }) " Changed lines in gutter
 call s:h("JBGutterDeletedLine", { "fg": s:colors.gutterdel, "gui": "bold", "cterm": "bold"  }) " Deleted lines in gutter
 call s:h("JBGutterLineNr", { "fg": s:colors.lineNumber }) " Line numbers in gutter
-call s:h("JBGutterLineNrOnCaretRow", { "fg": s:colors.lineNumberOnCaretRow }) " Line numbers in gutter on caret row
+call s:h("JBGutterLineNrOnCaretRow", { "fg": s:colors.lineNumberOnCaretRow, "bg": s:colors.caretRow }) " Line numbers in gutter on caret row
 
 " UI
 call s:h("JBEditorBG", { "bg": s:colors.editor }) " Editor background
