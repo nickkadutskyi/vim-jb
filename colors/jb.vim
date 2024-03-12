@@ -77,6 +77,10 @@ call s:h("JBTag", { "fg": s:colors.tag }) " Tags
 call s:h("JBTagBracket", { "fg": s:colors.tagBracket }) " Tag Bracket
 call s:h("JBMatchedBracket", { "fg": s:colors.text, "bg": s:colors.folded, "gui": "bold", "cterm": "bold" }) " Matching brackets
 call s:h("JBStruct", { "fg": s:colors.struct })
+" Attributes or decorators
+cal s:h("JBAttribute", { "fg": s:colors.attribute })
+" Methods
+cal s:h("JBMethod", { "fg": s:colors.method })
 
 " Diff and Merge
 call s:h("JBDiffAddedLine", { "bg": s:colors.diffadd }) " Newly inserted lines in diff
@@ -355,6 +359,12 @@ highlight! link @constructor.php Normal
 " requires (php_tag) and "?>" to be set as @tag (by default they are @punctuation.bracket)
 highlight! link @tag.php JBKeyword
 
+" --- Typescript (nvim-treesitter/nvim-treesitter)
+highlight! link @variable.typescript JBConstant
+highlight! link @variable.member.typescript JBConstant
+highlight! link @type.typescript Normal
+highlight! link @attribute.typescript JBAttribute
+highlight! link @function.method.typescript JBMethod
 
 " === PLUGIN SPECIFIC HIGHLIGHTS (NON-LANGUAGE) ======================================================
 
@@ -495,6 +505,7 @@ if has('nvim')
   highlight! link LspCodeLens InfoText
   highlight! link LspCodeLensSeparator DiffAdd
   highlight! link LspSignatureActiveParameter Search
+  highlight! link LspInfoBorder Normal
   highlight! link TermCursor Cursor
   highlight! link healthError ErrorText
   highlight! link healthSuccess DiffAdd
