@@ -360,11 +360,19 @@ highlight! link @constructor.php Normal
 highlight! link @tag.php JBKeyword
 
 " --- Typescript (nvim-treesitter/nvim-treesitter)
-highlight! link @variable.typescript JBConstant
+" highlight! link @variable.typescript JBConstant
 highlight! link @variable.member.typescript JBConstant
 highlight! link @type.typescript Normal
 highlight! link @attribute.typescript JBAttribute
 highlight! link @function.method.typescript JBMethod
+highlight! link @function.method.call.typescript JBMethod
+highlight! link @variable.parameter.typescript Normal
+
+" --- Semantic tokens from tsserver
+highlight! link @lsp.typemod.property.declaration.typescript JBConstant
+highlight! link @lsp.typemod.member.defaultLibrary.typescript JBMethod
+highlight! link @lsp.typemod.parameter.declaration.typescript Normal
+highlight! link @lsp.type.parameter.typescript Normal
 
 " === PLUGIN SPECIFIC HIGHLIGHTS (NON-LANGUAGE) ======================================================
 
