@@ -38,7 +38,9 @@
     "textSearchResultBg": {"hex": "#114957", "rgb": [17, 73, 87], "xterm": 23},
     "statusLine":   {"hex": "#222327", "rgb": [34, 35, 39],     "xterm": 235},
     "attribute":    {"hex": "#B3AE60", "rgb": [179, 174, 96],   "xterm": 143},
-    "method":       {"hex": "#56A8F5", "rgb": [86, 168, 245],   "xterm": 75}
+    "method":       {"hex": "#56A8F5", "rgb": [86, 168, 245],   "xterm": 75},
+    "jbGenEditorVisGuides": {"hex": "#2B2D30", "rgb": [43, 45, 48],   "xterm": 17},
+    "jbGenEditorHardWrapGuide": {"hex": "#393B40", "rgb": [57, 59, 64],   "xterm": 59}
   },
   "mid": {
     "editor":       {"hex": "#2B2D30", "rgb": [43, 45, 48],     "xterm": 16},
@@ -79,7 +81,9 @@
     "textSearchResultBg": {"hex": "#114957", "rgb": [17, 73, 87], "xterm": 23},
     "statusLine": {"hex": "#222327", "rgb": [34, 35, 39], "xterm": 235},
     "attribute":    {"hex": "#B3AE60", "rgb": [179, 174, 96],   "xterm": 143},
-    "method":       {"hex": "#56A8F5", "rgb": [86, 168, 245],   "xterm": 75}
+    "method":       {"hex": "#56A8F5", "rgb": [86, 168, 245],   "xterm": 75},
+    "jbGenEditorVisGuides": {"hex": "#2B2D30", "rgb": [43, 45, 48],   "xterm": 17},
+    "jbGenEditorHardWrapGuide": {"hex": "#393B40", "rgb": [57, 59, 64],   "xterm": 59}
   },
   "light": {
     "editor":       {"hex": "#FFFFFF", "rgb": [255, 255, 255],  "xterm": 231},
@@ -121,6 +125,8 @@
     "textSearchResultBg": {"hex": "#FCD47E", "rgb": [252, 212, 126], "xterm": 222},
     "statusLine":   {"hex": "#fafafa", "rgb": [250, 250, 250],  "xterm": 255},
     "attribute":    {"hex": "#9E880D", "rgb": [158, 136, 13],   "xterm": 136},
-    "method":       {"hex": "#7A7A43", "rgb": [122, 122, 67],   "xterm": 101}
+    "method":       {"hex": "#7A7A43", "rgb": [122, 122, 67],   "xterm": 101},
+    "jbGenEditorVisGuides": {"hex": "#DAE6FD", "rgb": [218, 230, 253],   "xterm": 189},
+    "jbGenEditorHardWrapGuide": {"hex": "#EBECF0", "rgb": [235, 236, 240],   "xterm": 231}
   }
 }

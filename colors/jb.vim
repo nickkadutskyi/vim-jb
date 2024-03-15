@@ -50,6 +50,12 @@ endfunction
 " === JETBRAINS COLOR GROUPS ==========================================================
 
 " General
+" -- Editor
+" ---- Guides
+" ------ Hard Wrap Guide
+call s:h("JBHardWrapGuide", { "fg": s:colors.jbGenEditorHardWrapGuide }) 
+" ------ Visual Guides
+call s:h("JBVisualGuide", { "fg": s:colors.jbGenEditorVisGuides })
 call s:h("JBDefault", { "fg": s:colors.text, "bg": s:colors.editor }) " Standard text
 call s:h("JBHyperlink", { "fg": s:colors.link, "gui": "underline", "cterm": "underline" })
 call s:h("JBTodo", { "fg": s:colors.todo }) " TODOs
