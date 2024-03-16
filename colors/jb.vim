@@ -56,6 +56,12 @@ endfunction
 call s:h("JBHardWrapGuide", { "fg": s:colors.jbGenEditorHardWrapGuide }) 
 " ------ Visual Guides
 call s:h("JBVisualGuide", { "fg": s:colors.jbGenEditorVisGuides })
+" -- Text
+" ---- Whitespaces
+" call s:h("JBTextWhitespace", { "fg": s:colors.jbGenTextWhitespaces })
+" Using custom for make it less visible
+call s:h("JBTextWhitespace", { "fg": s:colors.customGenTextWhitespaces })
+
 call s:h("JBDefault", { "fg": s:colors.text, "bg": s:colors.editor }) " Standard text
 call s:h("JBHyperlink", { "fg": s:colors.link, "gui": "underline", "cterm": "underline" })
 call s:h("JBTodo", { "fg": s:colors.todo }) " TODOs
@@ -200,7 +206,8 @@ highlight! link SpellCap Underline
 highlight! link SpellRare Underline
 highlight! link SpellLocal Underline
 highlight! link NonText LineNr
-highlight! link WhiteSpace LineNr
+highlight! link WhiteSpace JBTextWhitespace
+highlight! link Whitespace JBTextWhitespace
 highlight! link SpecialKey LineNr
 
 " --- UI ---

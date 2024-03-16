@@ -40,7 +40,9 @@
     "attribute":    {"hex": "#B3AE60", "rgb": [179, 174, 96],   "xterm": 143},
     "method":       {"hex": "#56A8F5", "rgb": [86, 168, 245],   "xterm": 75},
     "jbGenEditorVisGuides": {"hex": "#2B2D30", "rgb": [43, 45, 48],   "xterm": 17},
-    "jbGenEditorHardWrapGuide": {"hex": "#393B40", "rgb": [57, 59, 64],   "xterm": 59}
+    "jbGenEditorHardWrapGuide": {"hex": "#393B40", "rgb": [57, 59, 64],   "xterm": 59},
+    "jbGenTextWhitespaces": {"hex": "#6F737A", "rgb": [111, 115, 122],   "xterm": 66},
+    "customGenTextWhitespaces": {"hex": "#303136", "rgb": [48, 49, 54],   "xterm": 59}
   },
   "mid": {
     "editor":       {"hex": "#2B2D30", "rgb": [43, 45, 48],     "xterm": 16},
@@ -127,6 +129,8 @@
     "attribute":    {"hex": "#9E880D", "rgb": [158, 136, 13],   "xterm": 136},
     "method":       {"hex": "#7A7A43", "rgb": [122, 122, 67],   "xterm": 101},
     "jbGenEditorVisGuides": {"hex": "#DAE6FD", "rgb": [218, 230, 253],   "xterm": 189},
-    "jbGenEditorHardWrapGuide": {"hex": "#EBECF0", "rgb": [235, 236, 240],   "xterm": 231}
+    "jbGenEditorHardWrapGuide": {"hex": "#EBECF0", "rgb": [235, 236, 240],   "xterm": 231},
+    "jbGenTextWhitespaces": {"hex": "#ADADAD", "rgb": [173, 173, 173],   "xterm": 145},
+    "customGenTextWhitespaces": {"hex": "#F0F0F0", "rgb": [15, 15, 15],   "xterm": 231}
   }
 }
