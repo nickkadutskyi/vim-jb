@@ -107,6 +107,10 @@ call s:h("JBGutterDeletedLine", { "fg": s:colors.gutterdel, "gui": "bold", "cter
 call s:h("JBGutterLineNr", { "fg": s:colors.lineNumber }) " Line numbers in gutter
 call s:h("JBGutterLineNrOnCaretRow", { "fg": s:colors.lineNumberOnCaretRow, "bg": s:colors.caretRow }) " Line numbers in gutter on caret row
 
+call s:h("JBGutterStagedAddedLine", { "fg": s:colors.gutterstagedadd, "gui": "bold", "cterm": "bold" }) " Added lines in gutter
+call s:h("JBGutterStagedChangedLine", { "fg": s:colors.gutterstagedmod, "gui": "bold", "cterm": "bold"  }) " Changed lines in gutter
+call s:h("JBGutterStagedDeletedLine", { "fg": s:colors.gutterstageddel, "gui": "bold", "cterm": "bold"  }) " Deleted lines in gutter
+
 " UI
 call s:h("JBEditorBG", { "bg": s:colors.editor }) " Editor background
 call s:h("JBTree", { "fg": s:colors.text, "bg": s:colors.folded }) " Tree text
@@ -394,10 +398,14 @@ highlight! link GitGutterAdd JBGutterAddedLine
 highlight! link GitGutterChange JBGutterChangedLine
 highlight! link GitGutterDelete JBGutterDeletedLine
 
+" --- GitSigns ---
 highlight! link GitSignsAdd JBGutterAddedLine
 highlight! link GitSignsChange JBGutterChangedLine
 highlight! link GitSignsDelete JBGutterDeletedLine
-highlight! link GitSignsAdd JBGutterAddedLine
+
+highlight! link GitSignsStagedAdd JBGutterStagedAddedLine
+highlight! link GitSignsStagedChange JBGutterStagedChangedLine
+highlight! link GitSignsStagedDelete JBGutterStagedDeletedLine
 
 " --- Fugitive ---
 highlight! link diffAdded DiffAdd
