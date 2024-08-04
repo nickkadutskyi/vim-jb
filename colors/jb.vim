@@ -385,11 +385,20 @@ highlight! link @function.method.typescript JBMethod
 highlight! link @function.method.call.typescript JBMethod
 highlight! link @variable.parameter.typescript Normal
 
-" --- Semantic tokens from tsserver
+" --- Semantic tokens from tsserver for TypeScript
 highlight! link @lsp.typemod.property.declaration.typescript JBConstant
 highlight! link @lsp.typemod.member.defaultLibrary.typescript JBMethod
 highlight! link @lsp.typemod.parameter.declaration.typescript Normal
 highlight! link @lsp.type.parameter.typescript Normal
+
+" --- Treesitter tokens for Nix
+highlight! link @variable.nix JBDefault
+highlight! link @variable.member.nix JBDefault
+highlight! link @boolean.nix JBKeyword
+"
+" --- Semantic tokens from nil_ls for Nix
+highlight! link @lsp.type.property.nix JBDefault
+highlight! link @lsp.type.boolean.nix JBKeyword
 
 " === PLUGIN SPECIFIC HIGHLIGHTS (NON-LANGUAGE) ======================================================
 
