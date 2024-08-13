@@ -395,7 +395,11 @@ highlight! link @lsp.type.parameter.typescript Normal
 highlight! link @variable.nix JBDefault
 highlight! link @variable.member.nix JBDefault
 highlight! link @boolean.nix JBKeyword
-"
+
+" --- Treesitter tokens for Bash
+highlight! link @variable.bash JBDefault
+highlight! link @variable.parameter.bash JBDefault
+
 " --- Semantic tokens from nil_ls for Nix
 highlight! link @lsp.type.property.nix JBDefault
 highlight! link @lsp.type.boolean.nix JBKeyword
