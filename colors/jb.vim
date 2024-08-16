@@ -414,7 +414,7 @@ highlight! link @variable.parameter.lua JBUserKeyword3
 " --- Semantic tokens from lua_ls (lua-language-server) for Lua
 highlight! link @lsp.type.variable.lua JBDefault
 highlight! link @lsp.typemod.variable.global.lua JBConstant
-highlight! link @lsp.typemod.parameter.declaration.lua JBUserKeyword3
+highlight! link @lsp.type.parameter.lua JBUserKeyword3
 
 " --- Treesitter tokens for Bash
 highlight! link @variable.bash JBDefault
