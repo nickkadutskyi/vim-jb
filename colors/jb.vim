@@ -68,6 +68,13 @@ call s:h("JBTextWhitespace", { "fg": s:colors.customGenTextWhitespaces })
 " -- Keyword3
 call s:h("JBUserKeyword3", { "fg": s:colors.jbUserKeyword3 })
 
+" Lua
+" -- Class Member
+" ---- Static Method
+call s:h("JBLuaStaticMethod", { "fg": s:colors.function, "gui": "italic", "cterm": "italic" })
+" -- Std api
+ call s:h("JBLuaStdApi", { "fg": s:colors.jbLuaStdApi })
+
 " - JB Preferences Editor->Color Scheme END
 
 " call s:h("JBDefault", { "fg": s:colors.text, "bg": s:colors.editor }) " Standard text
@@ -413,8 +420,14 @@ highlight! link @variable.lua JBDefault
 highlight! link @variable.parameter.lua JBUserKeyword3
 " --- Semantic tokens from lua_ls (lua-language-server) for Lua
 highlight! link @lsp.type.variable.lua JBDefault
-highlight! link @lsp.typemod.variable.global.lua JBConstant
 highlight! link @lsp.type.parameter.lua JBUserKeyword3
+highlight! link @lsp.type.property.lua JBDefault
+highlight! link @lsp.type.method.lua JBLuaStaticMethod
+highlight! link @lsp.typemod.variable.global.lua JBConstant
+highlight! link @lsp.typemod.variable.declaration.lua JBDefault
+highlight! link @lsp.typemod.function.declaration.lua JBDefault
+highlight! link @lsp.mod.defaultLibrary.lua JBLuaStdApi
+highlight! link @lsp.mod.declaration.lua JBUserKeyword3
 
 " --- Treesitter tokens for Bash
 highlight! link @variable.bash JBDefault

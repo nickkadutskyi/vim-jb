@@ -46,6 +46,7 @@
     "jbGenEditorHardWrapGuide": {"hex": "#393B40", "rgb": [57, 59, 64],   "xterm": 59},
     "jbGenTextWhitespaces": {"hex": "#6F737A", "rgb": [111, 115, 122],   "xterm": 66},
     "jbUserKeyword3": {"hex": "#0DA19E", "rgb": [13, 161, 158],   "xterm": 37},
+    "jbLuaStdApi": {"hex": "#CC542E", "rgb": [204, 84, 46],   "xterm": 166},
     "customGenTextWhitespaces": {"hex": "#303136", "rgb": [48, 49, 54],   "xterm": 59}
   },
   "mid": {
@@ -89,6 +90,7 @@
     "attribute":    {"hex": "#B3AE60", "rgb": [179, 174, 96],   "xterm": 143},
     "method":       {"hex": "#56A8F5", "rgb": [86, 168, 245],   "xterm": 75},
     "jbUserKeyword3": {"hex": "#0DA19E", "rgb": [13, 161, 158],   "xterm": 37},
+    "jbLuaStdApi": {"hex": "#CC542E", "rgb": [204, 84, 46],   "xterm": 166},
     "jbGenEditorVisGuides": {"hex": "#2B2D30", "rgb": [43, 45, 48],   "xterm": 17},
     "jbGenEditorHardWrapGuide": {"hex": "#393B40", "rgb": [57, 59, 64],   "xterm": 59}
   },
@@ -140,6 +142,7 @@
     "jbGenEditorHardWrapGuide": {"hex": "#EBECF0", "rgb": [235, 236, 240],   "xterm": 231},
     "jbGenTextWhitespaces": {"hex": "#ADADAD", "rgb": [173, 173, 173],   "xterm": 145},
     "jbUserKeyword3": {"hex": "#008080", "rgb": [0, 128, 128],   "xterm": 30},
+    "jbLuaStdApi": {"hex": "#CC542E", "rgb": [204, 84, 46],   "xterm": 166},
     "customGenTextWhitespaces": {"hex": "#F0F0F0", "rgb": [15, 15, 15],   "xterm": 231}
   }
 }
