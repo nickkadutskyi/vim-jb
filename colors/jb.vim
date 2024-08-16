@@ -62,7 +62,8 @@ call s:h("JBVisualGuide", { "fg": s:colors.jbGenEditorVisGuides })
 " Using custom for make it less visible
 call s:h("JBTextWhitespace", { "fg": s:colors.customGenTextWhitespaces })
 
-call s:h("JBDefault", { "fg": s:colors.text, "bg": s:colors.editor }) " Standard text
+" call s:h("JBDefault", { "fg": s:colors.text, "bg": s:colors.editor }) " Standard text
+call s:h("JBDefault", { "fg": s:colors.text}) " Standard text
 call s:h("JBHyperlink", { "fg": s:colors.link, "gui": "underline", "cterm": "underline" })
 call s:h("JBTodo", { "fg": s:colors.todo }) " TODOs
 call s:h("JBSearchResult", { "bg": s:colors.textSearchResultBg, "fg": (has_key(s:colors, "textSearchResultFg") ? s:colors.textSearchResultFg : {}) }) " Search results
@@ -398,6 +399,11 @@ highlight! link @lsp.type.parameter.nix JBDefault
 highlight! link @variable.parameter.nix JBDefault
 highlight! link @variable.member.nix JBDefault
 highlight! link @boolean.nix JBKeyword
+
+" --- Tokens for Lua
+highlight! link @variable.lua JBDefault
+highlight! link @lsp.type.variable.lua JBDefault
+highlight! link @lsp.typemod.variable.global.lua JBConstant
 
 " --- Treesitter tokens for Bash
 highlight! link @variable.bash JBDefault
