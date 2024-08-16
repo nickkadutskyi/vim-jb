@@ -49,6 +49,8 @@ endfunction
 
 " === JETBRAINS COLOR GROUPS ==========================================================
 
+" - JB Preferences Editor->Color Scheme START
+
 " General
 " -- Editor
 " ---- Guides
@@ -61,6 +63,12 @@ call s:h("JBVisualGuide", { "fg": s:colors.jbGenEditorVisGuides })
 " call s:h("JBTextWhitespace", { "fg": s:colors.jbGenTextWhitespaces })
 " Using custom for make it less visible
 call s:h("JBTextWhitespace", { "fg": s:colors.customGenTextWhitespaces })
+
+" User-Defined File Types
+" -- Keyword3
+call s:h("JBUserKeyword3", { "fg": s:colors.jbUserKeyword3 })
+
+" - JB Preferences Editor->Color Scheme END
 
 " call s:h("JBDefault", { "fg": s:colors.text, "bg": s:colors.editor }) " Standard text
 call s:h("JBDefault", { "fg": s:colors.text}) " Standard text
@@ -400,10 +408,13 @@ highlight! link @variable.parameter.nix JBDefault
 highlight! link @variable.member.nix JBDefault
 highlight! link @boolean.nix JBKeyword
 
-" --- Tokens for Lua
+" --- Treesitter tokens for Lua
 highlight! link @variable.lua JBDefault
+highlight! link @variable.parameter.lua JBUserKeyword3
+" --- Semantic tokens from lua_ls (lua-language-server) for Lua
 highlight! link @lsp.type.variable.lua JBDefault
 highlight! link @lsp.typemod.variable.global.lua JBConstant
+highlight! link @lsp.typemod.parameter.declaration.lua JBUserKeyword3
 
 " --- Treesitter tokens for Bash
 highlight! link @variable.bash JBDefault
