@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> This repo is no longer maintained please refer to a better version [jb.nvim](https://github.com/nickkadutskyi/jb.nvim)
+
+
+
 <div align="center">
     </br>
     <img src="assets/logo.png" width="75" alt="Logo"/>
